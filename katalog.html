@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Táborové hry pro různé přiležitosti">
+    <meta name="keywords" content="táborové hry, dětské oslavy, hry pro různé věkové kategorie">
+    <meta name="author" content="Daniel-N">
+    <link rel="stylesheet" href="stylykatalog.css">
+    <title>Katalog Her</title>
+</head>
+<body>
+    <header>
+        <h1>Táborová Máma</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Domů</a>
+        <a href="kontakt.html">Kontakt</a>
+        <a href="vyhledávání.html">Vyhledávání</a>
+    </nav>
+
+    <main>
+        <section id="katalog">
+            <h2>Katalog &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; her</h2>
+            
+            <!-- Hry -->
+            <div class="game-card" data-kategorie="oslavy" data-vek="6-12">
+                <img src="obrázky/balloons.png" alt="Obrázek hry">
+                <h3>Hra na oslavu</h3>
+                <p>Vhodné pro děti 6-12 let. Ideální na narozeninové oslavy.</p>
+                <p><strong>Cena:</strong> 49 Kč</p>
+                <button>Koupit a stáhnout</button>
+            </div>
+            
+            <div class="game-card" data-kategorie="oslavy" data-vek="13-18">
+                <img src="obrázky/balloons.png" alt="Obrázek hry">
+                <h3>Hra na oslavu</h3>
+                <p>Vhodné pro děti 6-12 let. Ideální na narozeninové oslavy.</p>
+                <p><strong>Cena:</strong> 49 Kč</p>
+                <button>Koupit a stáhnout</button>
+            </div>
+            
+            <div class="game-card" data-kategorie="taborove" data-vek="6-12">
+                <img src="obrázky/tent.png" alt="Obrázek hry">
+                <h3>Táborová hra</h3>
+                <p>Perfektní pro větší skupiny a táborová dobrodružství.</p>
+                <p><strong>Cena:</strong> 99 Kč</p>
+                <button>Koupit a stáhnout</button>
+            </div>
+
+            <div class="game-card" data-kategorie="taborove" data-vek="13-18">
+                <img src="obrázky/tent.png" alt="Obrázek hry">
+                <h3>Táborová hra</h3>
+                <p>Perfektní pro větší skupiny a táborová dobrodružství.</p>
+                <p><strong>Cena:</strong> 99 Kč</p>
+                <button>Koupit a stáhnout</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Táborová Máma. Všechna práva vyhrazena.</p>
+    </footer>
+
+    <script>
+        // Získání parametrů z URL
+        const params = new URLSearchParams(window.location.search);
+        const kategorie = params.get("kategorie");
+        const vek = params.get("vek");
+
+        // Filtrování her
+        document.querySelectorAll(".game-card").forEach(hra => {
+            const hraKategorie = hra.getAttribute("data-kategorie");
+            const hraVek = hra.getAttribute("data-vek");
+
+            // Zobrazit hru jen pokud odpovídá kategoriím nebo věku
+            if (
+                (kategorie && hraKategorie !== kategorie) || 
+                (vek && hraVek !== vek)
+            ) {
+                hra.style.display = "none"; // Skryje hru
+            } else {
+                hra.style.display = "block"; // Zobrazí hru
+            }
+        });
+    </script>
+</body>
+</html>

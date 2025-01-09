@@ -1,0 +1,142 @@
+/* Reset stylů pro všechny prvky */
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Správné počítání velikostí boxů */
+    height: 100%; /* Nastavení výšky na celou stránku */
+}
+
+/* Základní nastavení těla stránky */
+body {
+    font-family: Arial, sans-serif; /* Hlavní písmo stránky */
+    background-color: #f9f9f9; /* Světle šedé pozadí */
+    color: #333; /* Tmavě šedý text */
+    margin: 0;
+    padding: 0;
+}
+
+/* Hlavička stránky */
+header {
+    background-image: url('obrázky/wood-411643_640.jpg'); /* Obrázek na pozadí */
+    background-size: 35%; /* Velikost pozadí */
+    background-position: center; /* Zarovnání obrázku na střed */
+    background-repeat: repeat; /* Obrázek se opakuje */
+    padding: 5px; /* Vnitřní odsazení */
+    text-align: center; /* Text zarovnaný na střed */
+}
+
+/* Hlavní nadpis (h1) v hlavičce */
+header h1 {
+    font-family: 'Times New Roman', Times, serif; /* Styl písma */
+    font-size: 100px; /* Velikost textu */
+    font-weight: bold; /* Tučné písmo */
+    color: rgb(59, 170, 105); /* Zelená barva textu */
+    -webkit-text-stroke: 2px rgb(51, 43, 43); /* Kontura textu (pro moderní prohlížeče) */
+    text-shadow: 42px 33px 4px black; /* Stín pod textem */
+    margin-bottom: 170px; /* Velká mezera pod nadpisem */
+    text-align: center; /* Zarovnání textu na střed */
+}
+
+
+
+/* Navigace */
+nav {
+    position: relative; /* Umožňuje přesné umístění prvků */
+    top: -160px; /* Posun navigace nahoru */
+    display: flex; /* Flexibilní layout */
+    justify-content: center; /* Zarovnání položek na střed */
+    background-image: url('obrázky/firewood-2024457_640.webp'); /* Obrázek na pozadí */
+    background-position: center; /* Obrázek zarovnaný na střed */
+    background-repeat: no-repeat; /* Obrázek se neopakuje */
+    background-size: 30%; /* Velikost pozadí */
+    margin: 0 auto; /* Vycentrování navigace */
+    padding: 51px 10vw; /* Vnitřní odsazení (10 % šířky obrazovky) */
+    border-radius: 10px; /* Zaoblené rohy */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Jemný stín */
+}
+
+/* Odkazy v navigaci */
+nav a {
+    border: 2px solid black; /* Ohraničení odkazu */
+    border-radius: 20%; /* Zaoblené rohy odkazu */
+    color: #3BAA69; /* Zelená barva textu */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Styl písma */
+    font-size: 1.3rem; /* Velikost textu */
+    padding: 14px; /* Vnitřní odsazení odkazu */
+    text-decoration: none; /* Zrušení podtržení textu */
+    text-align: center; /* Zarovnání textu na střed */
+    transition: all 0.3s ease; /* Plynulý efekt při najetí myší */
+}
+
+/* Efekt při najetí myší na odkaz */
+nav a:hover {
+    background-color: #575757; /* Šedé pozadí */
+    color: #ffffff; /* Bílé písmo */
+    transform: scale(1.1); /* Zvětšení odkazu */
+}
+
+/* Media query pro malé obrazovky */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Odkazy v navigaci se seřadí vertikálně */
+        padding: 30px 5vw; /* Větší vnitřní okraje pro malé obrazovky */
+    }
+
+    nav a {
+        margin-bottom: 10px; /* Mezery mezi odkazy */
+        font-size: 1rem; /* Zmenšení velikosti písma pro malé obrazovky */
+    }
+}
+
+/* Hlavní obsah */
+main {
+    background-image: url('obrázky/fire-8230528_960_720.webp'); /* Pozadí pro hlavní obsah */
+    background-size: cover; /* Pozadí se přizpůsobí velikosti okna */
+    background-position: center; /* Umístění pozadí na střed */
+    background-repeat: no-repeat; /* Nepoužívá opakování pozadí */
+    background-attachment: fixed; /* Pozadí se nezmění při scrollování */
+    min-height: 100vh; /* Hlavní obsah bude mít minimální výšku 100% okna */
+    margin-top: -178px; /* Zajištění, že mezi nav a main nebude mezera */
+    padding-top: 0; /* Odstranění paddingu nahoře */
+}
+
+.container {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-evenly;
+    align-content: center;
+    flex-direction: row;
+    align-items: stretch;
+}
+  
+  .první, .druhý, .třetí {
+    flex: 1;
+    min-width: 250px;
+    padding: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(192, 231, 154);
+    margin-top: 20rem;
+    margin-left: 20px;
+    padding-bottom: 5rem;
+    
+  }
+
+/* Třída pro obrázky v obsahu (pokud budeš mít nějaké obrázky) */
+.container img {
+    width: 10%; /* Nastavení šířky obrázku */
+    position: left; /* Pozice obrázku vlevo */
+    padding: 50px; /* Okraje kolem obrázku */
+    margin: 0 auto; /* Nastavení obrázku na střed */
+    float: left; /* Umožní textu obíhat obrázek */
+}
+
+/* Footer */
+footer {
+    text-align: center; /* Zarovnání textu do středu */
+    padding: 5px; /* Vnitřní okraje pro footer */
+    background-color: #494040; /* Pozadí footeru */
+    color: white; /* Barva textu ve footeru */
+    margin-top: 0; /* Zajištění, že mezi ostatními sekcemi a footerem nebude mezera */
+}
