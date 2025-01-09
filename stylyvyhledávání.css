@@ -93,11 +93,47 @@ nav a {
 
 /* Efekt při najetí myší na odkaz */
 nav a:hover {
-    background-color: #575757; /* Šedé pozadí */
-    color: #ffffff; /* Bílé písmo */
-    transform: scale(1.1); /* Zvětšení odkazu */
+    background-color: #575757;
+    color: #ffffff;
+    transform: scale(1.1);
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+ main {
+    text-align: center;
+ }
+
+/* Zápatí stránky */
+footer {
+    text-align: center; /* Zarovnání textu na střed */
+    padding: 5px; /* Vnitřní odsazení */
+    background-color: #494040; /* Tmavě šedé pozadí */
+    color: white; /* Bílé písmo */
+    margin-top: 20px; /* Mezery nad zápatím */
+}
+/* Optimalizace pro malé obrazovky */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Navigace se změní na sloupec */
+        padding: 30px 5vw; /* Upravené odsazení */
+    }
+
+    nav a {
+        margin-bottom: 10px; /* Větší mezery mezi odkazy */
+        font-size: 1rem; /* Menší text pro lepší čitelnost */
+    }
+
+    header h1 {
+        font-size: 60px; /* Zmenšený nadpis na menších zařízeních */
+        margin-bottom: 50px; /* Menší mezera pod nadpisem */
+    }
+
+    .game-card {
+        margin: 10px 5px; /* Menší mezery mezi kartami */
+        padding: 10px; /* Méně prostoru uvnitř karty */
+    }
+
+    footer {
+        font-size: 0.9rem; /* Menší text v zápatí */
+    }
 }
 
-body {
-    text-align: center;
-}
