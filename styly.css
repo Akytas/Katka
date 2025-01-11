@@ -90,15 +90,16 @@ nav a:hover {
 
 /* Hlavní obsah */
 main {
-    background-image: url('obrázky/fire-8230528_960_720.webp'); /* Pozadí pro hlavní obsah */
-    background-size: cover; /* Pozadí se přizpůsobí velikosti okna */
-    background-position: center; /* Umístění pozadí na střed */
-    background-repeat: no-repeat; /* Nepoužívá opakování pozadí */
-    background-attachment: fixed; /* Pozadí se nezmění při scrollování */
+    background-image: url('obrázky/giphy.webp'); /* Cesta k animaci (WebP nebo GIF) */
+    background-size: cover; /* Pozadí se přizpůsobí velikosti */
+    background-position: center; /* Střed animace */
+    background-repeat: no-repeat; /* Bez opakování animace */
+    background-attachment: fixed; /* Animace zůstane na místě při scrollování */
     min-height: 100vh; /* Hlavní obsah bude mít minimální výšku 100% okna */
     margin-top: -178px; /* Zajištění, že mezi nav a main nebude mezera */
     padding-top: 0; /* Odstranění paddingu nahoře */
 }
+
 
 .container {
     margin-top: 20px;
