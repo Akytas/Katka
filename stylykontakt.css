@@ -28,7 +28,7 @@ header {
 
 header h1 {
     font-family: 'Times New Roman', Times, serif; /* Styl písma nadpisu */
-    font-size: 100px; /* Velikost písma */
+    font-size: 5rem; /* Velikost písma */
     font-weight: bold; /* Tučné písmo */
     color: rgb(59, 170, 105); /* Zelená barva textu */
     -webkit-text-stroke: 2px rgb(51, 43, 43); /* Kontura textu (pro moderní prohlížeče) */
