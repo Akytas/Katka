@@ -33,34 +33,11 @@ header h1 {
     color: rgb(59, 170, 105); /* Zelená barva textu */
     -webkit-text-stroke: 2px rgb(51, 43, 43); /* Kontura textu (pro moderní prohlížeče) */
     text-shadow: 42px 33px 4px black; /* Stín pod textem */
-    margin-bottom: 170px; /* Velká mezera pod nadpisem */
+    margin-bottom: 180px; /* Velká mezera pod nadpisem */
     text-align: center; /* Zarovnání textu na střed */
 }
 
-/*nadpis H2*/
-h2 {
-    font-family: 'Times New Roman', Times, serif; /* Styl písma */
-    font-size: 50px; /* Velikost textu */
-    font-weight: bold; /* Tučné písmo */
-    color: rgb(59, 170, 105); /*  barva textu */
-    text-align: left;
-    margin: 20px auto;
-    background-image: url('obrázky/map.png'); /* Obrázek na pozadí */
-    background-size: 6%; /* Velikost pozadí */
-    background-position: bottom; /* Zarovnání obrázku na střed */
-    background-repeat: no-repeat; /* Obrázek se opakuje */
-    background-position-y: top;
-    padding: 30px 37vw; /* Vnitřní odsazení (10 % šířky obrazovky) */
-    border-radius: 10px; /* Zaoblené rohy */
-    
-}
 
-/* Menší nadpis (h3) v hlavičce */
-header h3 {
-    font-family: 'Times New Roman', Times, serif; /* Styl písma */
-    font-size: 2em; /* Velikost textu */
-    color: rgb(59, 170, 105); /* Zelená barva textu */
-}
 
 /* Navigace */
 nav {
@@ -93,10 +70,22 @@ nav a {
 
 /* Efekt při najetí myší na odkaz */
 nav a:hover {
-    background-color: #575757;
-    color: #ffffff;
-    transform: scale(1.1);
-    transition: transform 0.2s ease, background-color 0.3s ease;
+    background-color: #575757; /* Šedé pozadí */
+    color: #ffffff; /* Bílé písmo */
+    transform: scale(1.1); /* Zvětšení odkazu */
+}
+
+/* Media query pro malé obrazovky */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Odkazy v navigaci se seřadí vertikálně */
+        padding: 30px 5vw; /* Větší vnitřní okraje pro malé obrazovky */
+    }
+
+    nav a {
+        margin-bottom: 10px; /* Mezery mezi odkazy */
+        font-size: 1rem; /* Zmenšení velikosti písma pro malé obrazovky */
+    }
 }
  main {
     text-align: center;
@@ -110,30 +99,5 @@ footer {
     color: white; /* Bílé písmo */
     margin-top: 20px; /* Mezery nad zápatím */
 }
-/* Optimalizace pro malé obrazovky */
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column; /* Navigace se změní na sloupec */
-        padding: 30px 5vw; /* Upravené odsazení */
-    }
 
-    nav a {
-        margin-bottom: 10px; /* Větší mezery mezi odkazy */
-        font-size: 1rem; /* Menší text pro lepší čitelnost */
-    }
-
-    header h1 {
-        font-size: 60px; /* Zmenšený nadpis na menších zařízeních */
-        margin-bottom: 50px; /* Menší mezera pod nadpisem */
-    }
-
-    .game-card {
-        margin: 10px 5px; /* Menší mezery mezi kartami */
-        padding: 10px; /* Méně prostoru uvnitř karty */
-    }
-
-    footer {
-        font-size: 0.9rem; /* Menší text v zápatí */
-    }
-}
 
